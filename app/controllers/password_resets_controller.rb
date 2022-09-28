@@ -1,5 +1,4 @@
 class PasswordResetsController < ApplicationController
-  include SessionsHelper
   before_action :get_user,   only: [:edit, :update]
   before_action :valid_user, only: [:edit, :update]
   before_action :check_expiration, only: [:edit, :update]    # （1）への対応
